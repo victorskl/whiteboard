@@ -1,7 +1,12 @@
 package whiteboard.domain.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity(name = "Users")
 public abstract class User {
 
+    @Id
     private Long id;
     private String name;
     private String email;

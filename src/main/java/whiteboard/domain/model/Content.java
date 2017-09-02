@@ -8,10 +8,10 @@ import java.util.Date;
 public abstract class Content {
 
     @Id
-    @GeneratedValue(generator = "increment")
+    //@GeneratedValue(generator = "increment")
     private Long id;
     private String title;
-    private User postedBy;
+    //private User postedBy;
     private Date timeOfPost;
     private Date lastModify;
 
@@ -23,13 +23,13 @@ public abstract class Content {
         this.title = title;
     }
 
-    public User getPostedBy() {
-        return postedBy;
-    }
-
-    public void setPostedBy(User postedBy) {
-        this.postedBy = postedBy;
-    }
+//    public User getPostedBy() {
+//        return postedBy;
+//    }
+//
+//    public void setPostedBy(User postedBy) {
+//        this.postedBy = postedBy;
+//    }
 
     public Date getTimeOfPost() {
         return timeOfPost;
