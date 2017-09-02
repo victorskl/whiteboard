@@ -2,13 +2,15 @@ package whiteboard.domain.model;
 
 import java.util.Date;
 
-public class Announcement {
+public class Announcement extends Content{
 
-    private Date postedOn;
-    private Date modifiedOn;
-    private String title;
-    private String message;
-    private User postedBy;
-    private Subject postedTo;
+    private String content;
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 }
