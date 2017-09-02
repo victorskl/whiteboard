@@ -1,8 +1,12 @@
 package whiteboard.domain.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
+@Entity(name = "AssessmentSubmissionLinks")
 public class AssessmentSubmission extends Content{
+
     private Date dueTime;
     private String linkURL;
     private Integer submissionCount;

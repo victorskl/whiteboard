@@ -1,13 +1,20 @@
 package whiteboard.domain.model;
 
+import javax.persistence.*;
 import java.util.List;
 
+@Entity(name = "Subjects")
 public class Subject {
 
-    private String name;
+    @Id
     private String code;
+    private String name;
+
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<SubjectCoordinator> coordinators;
     private String department;
+
+    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL)
     private List<Content> contents;
 
     public String getName() {
@@ -40,5 +47,13 @@ public class Subject {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public List<Content> getContents() {
+        return contents;
+    }
+
+    public void setContents(List<Content> contents) {
+        this.contents = contents;
     }
 }

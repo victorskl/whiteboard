@@ -1,7 +1,9 @@
 package whiteboard.domain.model;
 
+import javax.persistence.Entity;
 import java.io.File;
 
+@Entity(name = "TeachingMaterials")
 public class TeachingMaterial extends Content{
     private File attachment;
     private String description;

@@ -8,12 +8,26 @@ import java.util.Date;
 public abstract class Content {
 
     @Id
-    //@GeneratedValue(generator = "increment")
-    private Long id;
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    private int id;
     private String title;
-    //private User postedBy;
+
+    @OneToOne
+    private User postedBy;
     private Date timeOfPost;
     private Date lastModify;
+
+    @ManyToOne
+    private Subject subject;
+
+    //@GeneratedValue(generator = "increment")
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -23,13 +37,13 @@ public abstract class Content {
         this.title = title;
     }
 
-//    public User getPostedBy() {
-//        return postedBy;
-//    }
-//
-//    public void setPostedBy(User postedBy) {
-//        this.postedBy = postedBy;
-//    }
+    public User getPostedBy() {
+        return postedBy;
+    }
+
+    public void setPostedBy(User postedBy) {
+        this.postedBy = postedBy;
+    }
 
     public Date getTimeOfPost() {
         return timeOfPost;
@@ -45,5 +59,13 @@ public abstract class Content {
 
     public void setLastModify(Date lastModify) {
         this.lastModify = lastModify;
+    }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
     }
 }
