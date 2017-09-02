@@ -1,8 +1,15 @@
 package whiteboard.domain.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity(name = "Contents")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Content {
+
+    @Id
+    @GeneratedValue(generator = "increment")
+    private Long id;
     private String title;
     private User postedBy;
     private Date timeOfPost;

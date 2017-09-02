@@ -1,7 +1,9 @@
 package whiteboard.domain.model;
 
+import javax.persistence.Entity;
 import java.util.Date;
 
+@Entity(name = "Announcements")
 public class Announcement extends Content{
 
     private String content;

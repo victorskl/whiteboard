@@ -8,6 +8,7 @@ public class Subject {
     private String code;
     private List<SubjectCoordinator> coordinators;
     private String department;
+    private List<Content> contents;
 
     public String getName() {
         return name;
