@@ -1,18 +1,21 @@
 package whiteboard.domain.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.Entity;
-import java.util.Date;
+import java.io.Serializable;
 
 @Entity(name = "Announcements")
-public class Announcement extends Content{
+public class Announcement extends Content implements Serializable {
 
-    private String content;
+    @NotEmpty
+    private String message;
 
-    public String getContent() {
-        return content;
+    public String getMessage() {
+        return message;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

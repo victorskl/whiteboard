@@ -1,11 +1,11 @@
 package whiteboard.domain.model;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity(name = "AssessmentSubmissionLinks")
-public class AssessmentSubmission extends Content{
+public class AssessmentSubmission extends Content implements Serializable {
 
     private Date dueTime;
     private String linkURL;

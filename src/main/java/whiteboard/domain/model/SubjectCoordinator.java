@@ -3,10 +3,12 @@ package whiteboard.domain.model;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity(name = "SubjectCoordinators")
-public class SubjectCoordinator extends User {
+public class SubjectCoordinator extends User implements Serializable {
+
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Subject> subjects;
 

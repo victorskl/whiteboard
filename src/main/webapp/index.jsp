@@ -41,6 +41,15 @@
         <h1>Good day...</h1>
     </div>
 
+    <h2>Views</h2>
+    <ul>
+        <li><a href="/subject/list">subject/list</a></li>
+        <li><a href="/subject/new">subject/new</a></li>
+        <li><a href="/announcement/new">announcement/new</a></li>
+    </ul>
+
+    <hr/>
+
     <h2>Sample</h2>
     <ul>
         <li><c:out value="${'Knock, knock, anybody there!'}"/></li>

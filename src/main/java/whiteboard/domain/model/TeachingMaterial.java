@@ -2,9 +2,11 @@ package whiteboard.domain.model;
 
 import javax.persistence.Entity;
 import java.io.File;
+import java.io.Serializable;
 
 @Entity(name = "TeachingMaterials")
-public class TeachingMaterial extends Content{
+public class TeachingMaterial extends Content implements Serializable {
+
     private File attachment;
     private String description;
     private SubjectContentType type;
