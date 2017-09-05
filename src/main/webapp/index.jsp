@@ -43,9 +43,9 @@
 
     <h2>Views</h2>
     <ul>
-        <li><a href="/subject/list">subject/list</a></li>
-        <li><a href="/subject/new">subject/new</a></li>
-        <li><a href="/announcement/new">announcement/new</a></li>
+        <li><a href="<c:url value = '/subject/list'/>">subject/list</a></li>
+        <li><a href="<c:url value = '/subject/new'/>">subject/new</a></li>
+        <li><a href="<c:url value = '/announcement/new'/>">announcement/new</a></li>
     </ul>
 
     <hr/>
