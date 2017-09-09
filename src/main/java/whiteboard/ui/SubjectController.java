@@ -5,24 +5,23 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import whiteboard.domain.model.Announcement;
 import whiteboard.domain.model.Subject;
+import whiteboard.domain.model.TeachingMaterial;
 
-import javax.validation.ConstraintViolation;
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Set;
 
 @Controller
 @RequestMapping("/subject")
 public class SubjectController extends CommonController {
 
-    @GetMapping("/list")
-    public String subjects(ModelMap model) {
+    @GetMapping(value = {"/list", "/"})
+    public String subjects(ModelMap model,@RequestParam(required = false) String deletedSubjectCode) {
         model.addAttribute("title", "Subject List");
         model.addAttribute("subjects", subjectService.getSubjects());
+        model.addAttribute("deletedSubjectCode", deletedSubjectCode);
         return "subjectlist";
     }
 
@@ -30,40 +29,64 @@ public class SubjectController extends CommonController {
     public String newSubjectForm(ModelMap model) {
         model.addAttribute("title", "Add New Subject");
         model.addAttribute("subject", new Subject());
-        return "subjectnew";
+        return "subjectform";
     }
 
     @PostMapping("/add")
     public String addSubject(@ModelAttribute("subject") @Valid Subject subject, BindingResult result) {
-        Set<ConstraintViolation<Subject>> violations = validator.validate(subject);
-        for (ConstraintViolation<Subject> violation : violations) {
-            String propertyPath = violation.getPropertyPath().toString();
-            String message = violation.getMessage();
-            //String msg = "Invalid " + propertyPath + "(" + message + ")";
-            result.addError(new FieldError("subject", propertyPath, message));
-        }
+
+        validate(subject, result);
 
         if (result.hasErrors()) {
-            return "subjectnew";
+            return "subjectform";
         }
 
-        subjectService.addSubject(subject);
+        subjectService.saveOrUpdateSubject(subject);
 
         return "redirect:/subject/list";
     }
 
     @GetMapping("/{subjectCode}")
-    public String subjectView(@PathVariable String subjectCode, ModelMap model) {
+    public String subjectView(@PathVariable String subjectCode, ModelMap model
+            , @RequestParam(required = false) String deletedAnnouncement
+            , @RequestParam(required = false) String deletedTeachingMaterial) {
         Subject subject = subjectService.findBySubjectCode(subjectCode);
         model.addAttribute("title", subjectCode);
         model.addAttribute("subject", subject);
+        model.addAttribute("deletedAnnouncement", deletedAnnouncement);
+        model.addAttribute("deletedTeachingMaterial", deletedTeachingMaterial);
+
         //logger.info("size: " + subject.getContents().size());
         // will throw error https://www.google.com.au/search?q=failed+to+lazily+initialize+a+collection+of+role
         // move to service layer for Transactional scope https://stackoverflow.com/a/42206232
 
         List<Announcement> announcementList = contentService.findAnnouncementsBySubjectCode(subjectCode);
         model.addAttribute("announcements", announcementList);
+
+        List<TeachingMaterial> lectureNotes = contentService.findLectureNotesBySubjectCode(subjectCode);
+        model.addAttribute("lectureNotes", lectureNotes);
+
+        List<TeachingMaterial> workshopNotes = contentService.findWorkshopNotesBySubjectCode(subjectCode);
+        model.addAttribute("workshopNotes", workshopNotes);
+
+        List<TeachingMaterial> assessmentNotes = contentService.findAssessmentNotesBySubjectCode(subjectCode);
+        model.addAttribute("assessmentNotes", assessmentNotes);
+
         return "subject";
+    }
+
+    @GetMapping("/{subjectCode}/update")
+    public String subjectUpdate(@PathVariable String subjectCode, ModelMap model) {
+        Subject subject = subjectService.findBySubjectCode(subjectCode);
+        model.addAttribute("title", subjectCode);
+        model.addAttribute("subject", subject);
+        return "subjectform";
+    }
+
+    @PostMapping("/{subjectCode}/delete")
+    public String subjectDelete(@PathVariable String subjectCode, ModelMap model) {
+        subjectService.deleteBySubjectCode(subjectCode);
+        return "redirect:/subject/list?deletedSubjectCode=" + subjectCode;
     }
 
     private static final Logger logger = LogManager.getLogger(SubjectController.class);

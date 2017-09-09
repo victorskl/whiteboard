@@ -10,14 +10,12 @@ import whiteboard.domain.model.Announcement;
 import whiteboard.domain.model.Subject;
 
 import javax.validation.Valid;
-import java.util.Date;
-import java.util.List;
 
 @Controller
 @RequestMapping("/announcement")
 public class AnnouncementController extends CommonController {
 
-    @GetMapping(value = {"/new", "/add"})
+    @GetMapping(value = {"/new", "/add", "/"})
     public String newAnnouncementForm(ModelMap model, @RequestParam(required = false) String subjectCode) {
         model.addAttribute("title", "Add New Announcement");
         Announcement announcement = new Announcement();
@@ -31,7 +29,7 @@ public class AnnouncementController extends CommonController {
 
         model.addAttribute("announcement", announcement);
 
-        return "announcenew";
+        return "announcementform";
     }
 
     @PostMapping("/add")
@@ -40,32 +38,40 @@ public class AnnouncementController extends CommonController {
         validate(announcement, result);
 
         if (result.hasErrors()) {
-            System.out.println("hasErrors");
-            return "announcenew";
+            logger.error("hasErrors");
+            return "announcementform";
         }
 
-        Date now = new Date();
-        announcement.setTimeOfPost(now);
-        announcement.setLastModified(now);
+        contentService.saveOrUpdateAnnouncement(announcement);
 
-        announcement.setPostedBy(null);
-
-        contentService.addAnnouncement(announcement);
-
-        return "redirect:/subject/"+announcement.getSubject().getCode();
+        String view = "redirect:/subject/"+announcement.getSubject().getCode();
+        if (announcement.getId() != null)
+            view = "redirect:/announcement/"+announcement.getId();
+        return view;
     }
 
     @GetMapping("/{id}")
-    public String subjectView(@PathVariable Long id, ModelMap model) {
+    public String announcementView(@PathVariable Long id, ModelMap model) {
         Announcement announcement = contentService.findAnnouncementById(id);
         model.addAttribute("title", announcement.getTitle());
         model.addAttribute("announcement", announcement);
         return "announcement";
     }
 
-    @ModelAttribute("subjectList")
-    private List<Subject> subjectList() {
-        return subjectService.getSubjects();
+    @GetMapping("/{id}/update")
+    public String announcementUpdate(@PathVariable Long id, ModelMap model) {
+        Announcement announcement = contentService.findAnnouncementById(id);
+        model.addAttribute("title", announcement.getTitle());
+        model.addAttribute("announcement", announcement);
+        return "announcementform";
+    }
+
+    @PostMapping("/{id}/delete")
+    public String announcementDelete(@PathVariable Long id, ModelMap model) {
+        Announcement announcement = contentService.findAnnouncementById(id);
+        contentService.deleteAnnouncementById(id);
+        return "redirect:/subject/"+ announcement.getSubject().getCode()
+                + "?deletedAnnouncement=" + announcement.getTitle();
     }
 
     private static final Logger logger = LogManager.getLogger(AnnouncementController.class);

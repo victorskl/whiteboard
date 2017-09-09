@@ -15,8 +15,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-        <meta name="description" content="SanKhoLin.com Enterprise System"/>
-        <meta name="author" content="Victor San Kho Lin"/>
+        <meta name="description" content="Whiteboard Enterprise System"/>
+        <meta name="author" content="Whiteboard Team"/>
 
         <title><c:out value="${title}"/></title>
 
@@ -50,6 +50,18 @@
     <script type="text/javascript" src="${js}/jquery-1.11.3.min.js"><!----></script>
     <script type="text/javascript" src="${js}/holder.min.js"><!----></script>
     <script type="text/javascript" src="${bs}/js/bootstrap.min.js"><!----></script>
+
+    <script type="text/javascript">
+        var text_max = 4000;
+        $('#count_message').html(text_max + ' remaining');
+
+        $('#text').keyup(function() {
+            var text_length = $('#text').val().length;
+            var text_remaining = text_max - text_length;
+
+            $('#count_message').html(text_remaining + ' remaining');
+        });
+    </script>
 
     </body>
 

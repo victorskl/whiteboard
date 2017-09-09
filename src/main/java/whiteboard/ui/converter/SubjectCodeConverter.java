@@ -1,4 +1,4 @@
-package whiteboard.ui;
+package whiteboard.ui.converter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;

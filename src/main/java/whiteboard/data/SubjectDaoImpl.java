@@ -11,21 +11,30 @@ public class SubjectDaoImpl extends AbstractDao implements SubjectDao {
 
     @Override
     public List<Subject> getSubjects() {
-        Query query = getSession().createQuery("from Subjects");
+        Query query = getSession().createQuery("select s from Subjects s");
         List<Subject> subjectList = query.list();
         return subjectList;
     }
 
     @Override
     public void save(Subject subject) {
-        persist(subject);
+        doPersist(subject);
+    }
+
+    public void saveOrUpdate(Subject subject) {
+        doSaveOrUpdate(subject);
     }
 
     @Override
-    public Subject findBySubjectCode(String code) {
+    public Subject findBySubjectCode(String subjectCode) {
         Query<Subject> query = getSession()
                 .createQuery("select s from Subjects as s where s.code = :code")
-                .setParameter("code", code);
+                .setParameter("code", subjectCode);
         return query.getSingleResult();
+    }
+
+    @Override
+    public void deleteBySubjectCode(String subjectCode) {
+        doDelete(findBySubjectCode(subjectCode));
     }
 }

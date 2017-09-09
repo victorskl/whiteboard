@@ -22,13 +22,13 @@
         #clip {
             position: fixed;
             left: 0;
-            top: 0;
+            top: 20em;
             z-index: -1;
         }
 
         #clip:before {
-            content: "2";
-            font-size: 30.0em;
+            content: "LMS";
+            font-size: 20.0em;
             text-align: center;
             display: block;
             opacity: 0.2;
@@ -38,28 +38,28 @@
 <body>
 <div class="container">
     <div class="page-header">
-        <h1>Good day...</h1>
+        <h1>Whiteboard Enterprise LMS</h1>
     </div>
 
-    <h2>Views</h2>
+    <h3>Views</h3>
     <ul>
         <li><a href="<c:url value = '/subject/list'/>">subject/list</a></li>
         <li><a href="<c:url value = '/subject/new'/>">subject/new</a></li>
         <li><a href="<c:url value = '/announcement/new'/>">announcement/new</a></li>
     </ul>
 
-    <hr/>
+    <%--<hr/>--%>
 
-    <h2>Sample</h2>
-    <ul>
-        <li><c:out value="${'Knock, knock, anybody there!'}"/></li>
-        <li><a href="<c:url value="/hello"/>">Test Hello Servlet</a></li>
+    <%--<h2>Sample</h2>--%>
+    <%--<ul>--%>
+        <%--<li><c:out value="${'Knock, knock, anybody there!'}"/></li>--%>
+        <%--<li><a href="<c:url value="/hello"/>">Test Hello Servlet</a></li>--%>
 
-        <li><a href="cover">cover</a></li>
-        <li><a href="theme">theme</a></li>
-        <li><a href="admin">admin</a></li>
-        <li><a href="admin/dashboard">admin/dashboard</a></li>
-    </ul>
+        <%--<li><a href="cover">cover</a></li>--%>
+        <%--<li><a href="theme">theme</a></li>--%>
+        <%--<li><a href="admin">admin</a></li>--%>
+        <%--<li><a href="admin/dashboard">admin/dashboard</a></li>--%>
+    <%--</ul>--%>
 
 </div>
 <div id="clip"></div>

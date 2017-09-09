@@ -23,10 +23,16 @@
 
     <mvc:annotation-driven conversion-service="conversionService"/>
 
+    <!--
+        could potentially change to this way...
+        https://stackoverflow.com/questions/12094871/spring-beans-scan-for-converters-inject-into-customconversionservicefactory
+    -->
     <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
         <property name="converters">
             <set>
-                <bean class="whiteboard.ui.SubjectCodeConverter"/>
+                <bean class="whiteboard.ui.converter.SubjectCodeConverter"/>
+                <bean class="whiteboard.ui.converter.ContentDateConverter"/>
+                <bean class="whiteboard.ui.converter.TMTypeConverter"/>
             </set>
         </property>
     </bean>

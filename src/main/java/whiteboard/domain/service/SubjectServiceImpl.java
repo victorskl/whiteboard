@@ -28,11 +28,21 @@ public class SubjectServiceImpl implements SubjectService {
     }
 
     @Override
+    public void saveOrUpdateSubject(Subject subject) {
+        subjectDao.saveOrUpdate(subject);
+    }
+
+    @Override
     public Subject findBySubjectCode(String code) {
         Subject subject = subjectDao.findBySubjectCode(code);
         //logger.info("size: " + subject.getContents().size());
         // here, it works! see explanation https://stackoverflow.com/a/42206232
         return subject;
+    }
+
+    @Override
+    public void deleteBySubjectCode(String subjectCode) {
+        subjectDao.deleteBySubjectCode(subjectCode);
     }
 
     private static final Logger logger = LogManager.getLogger(SubjectServiceImpl.class);
