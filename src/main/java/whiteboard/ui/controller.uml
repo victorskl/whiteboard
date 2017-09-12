@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="763.0" y="202.0">whiteboard.ui.TeachingMaterialController</node>
+    <node x="398.0" y="191.0">whiteboard.ui.SubjectController</node>
+    <node x="440.5" y="0.0">whiteboard.ui.CommonController</node>
+    <node x="0.0" y="202.0">whiteboard.ui.AnnouncementController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="whiteboard.ui.TeachingMaterialController" target="whiteboard.ui.CommonController">
+      <point x="0.0" y="-81.5" />
+      <point x="956.0" y="166.0" />
+      <point x="657.1666666666667" y="166.0" />
+      <point x="86.66666666666674" y="70.5" />
+    </edge>
+    <edge source="whiteboard.ui.SubjectController" target="whiteboard.ui.CommonController">
+      <point x="0.0" y="-92.5" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="whiteboard.ui.AnnouncementController" target="whiteboard.ui.CommonController">
+      <point x="0.0" y="-81.5" />
+      <point x="189.0" y="166.0" />
+      <point x="483.8333333333333" y="166.0" />
+      <point x="-86.66666666666669" y="70.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="575.0" y="188.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

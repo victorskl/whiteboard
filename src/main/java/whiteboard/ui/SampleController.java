@@ -11,9 +11,16 @@ public class SampleController {
 
     @RequestMapping("/cover")
     public String cover(ModelMap model) {
-        model.addAttribute("title", "Cover Page - Bootstrap");
-        logger.debug("cover...");
+        model.addAttribute("title", "Cover Page - Whiteboard LMS");
+        logger.debug("loading cover page");
         return "cover";
+    }
+
+    @RequestMapping("/architecture")
+    public String architecture(ModelMap model) {
+        model.addAttribute("title", "About Architecture - Whiteboard LMS");
+        logger.debug("loading architecture page");
+        return "architecture";
     }
 
     @RequestMapping("/theme")

@@ -2,7 +2,6 @@ package whiteboard.domain.service;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import whiteboard.data.ContentDao;
 import whiteboard.domain.model.Announcement;
@@ -15,8 +14,11 @@ import java.util.List;
 @Transactional
 public class ContentServiceImpl implements ContentService {
 
-    @Autowired
     private ContentDao contentDao;
+
+    public ContentServiceImpl(ContentDao contentDao) {
+        this.contentDao = contentDao;
+    }
 
     public List<Announcement> findAnnouncementsBySubjectCode(String code) {
         return contentDao.findAnnouncementsBySubjectCode(code);

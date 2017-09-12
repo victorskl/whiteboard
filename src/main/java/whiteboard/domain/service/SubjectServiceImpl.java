@@ -2,7 +2,6 @@ package whiteboard.domain.service;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import whiteboard.data.SubjectDao;
 import whiteboard.domain.model.Subject;
@@ -14,8 +13,11 @@ import java.util.List;
 @Transactional
 public class SubjectServiceImpl implements SubjectService {
 
-    @Autowired
     private SubjectDao subjectDao;
+
+    public SubjectServiceImpl(SubjectDao subjectDao) {
+        this.subjectDao = subjectDao;
+    }
 
     @Override
     public List<Subject> getSubjects() {

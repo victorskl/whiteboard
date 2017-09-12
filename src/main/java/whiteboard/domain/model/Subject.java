@@ -18,10 +18,10 @@ public class Subject implements Serializable {
 
     private String department;
 
-    @ManyToMany(mappedBy = "subjects", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "subjects", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<SubjectCoordinator> coordinators;
 
-    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Content> contents;
 
     public String getName() {

@@ -37,6 +37,24 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+
+        <style type="text/css">
+            /* clip art */
+            #clip {
+                position: fixed;
+                left: 0;
+                top: 20em;
+                z-index: -1;
+            }
+
+            #clip:before {
+                content: "LMS";
+                font-size: 12.0em;
+                text-align: center;
+                display: block;
+                opacity: 0.08;
+            }
+        </style>
     </head>
 
     <body>
@@ -44,6 +62,7 @@
     <t:insertAttribute name="header"/>
 
     <t:insertAttribute name="body"/>
+    <div id="clip"> <!-- clip art --> </div>
 
     <t:insertAttribute name="footer"/>
 
