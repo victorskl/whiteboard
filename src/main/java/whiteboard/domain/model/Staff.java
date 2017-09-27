@@ -6,8 +6,8 @@ import javax.persistence.ManyToMany;
 import java.io.Serializable;
 import java.util.List;
 
-@Entity(name = "SubjectCoordinators")
-public class SubjectCoordinator extends User implements Serializable {
+@Entity(name = "Staffs")
+public class Staff extends User implements Serializable {
 
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Subject> subjects;
