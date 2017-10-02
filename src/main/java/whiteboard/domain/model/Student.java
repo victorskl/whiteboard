@@ -1,11 +1,20 @@
 package whiteboard.domain.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import java.util.List;
 
+@Entity(name = "Students")
 public class Student {
 
+    @NotEmpty
     private Long studentNumber;
 
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Subject> subjects;
 
     public List<Subject> getSubjects() {
