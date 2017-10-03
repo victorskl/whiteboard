@@ -5,7 +5,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity(name = "comments")
 public class Comment {
@@ -15,7 +14,7 @@ public class Comment {
 
     @NotEmpty
     @ManyToOne
-    private Staff staff;
+    private Staff lecturer;
 
     @NotEmpty
     private String message;
@@ -30,12 +29,12 @@ public class Comment {
         this.id = id;
     }
 
-    public Staff getStaff() {
-        return staff;
+    public Staff getLecturer() {
+        return lecturer;
     }
 
-    public void setStaff(Staff staff) {
-        this.staff = staff;
+    public void setLecturer(Staff lecturer) {
+        this.lecturer = lecturer;
     }
 
     public String getMessage() {
