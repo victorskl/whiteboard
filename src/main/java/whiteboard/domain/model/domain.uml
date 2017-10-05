@@ -3,147 +3,111 @@
   <ID>JAVA</ID>
   <OriginalElement>whiteboard.domain.model.Content</OriginalElement>
   <nodes>
-    <node x="208.13188775510207" y="0.0">javax.persistence.Entity</node>
-    <node x="646.03125" y="603.0">whiteboard.domain.model.SubjectContentType</node>
-    <node x="207.23431122448977" y="360.0">whiteboard.domain.model.Subject</node>
-    <node x="354.9843112244897" y="570.0">whiteboard.domain.model.Content</node>
-    <node x="562.4080357142857" y="0.0">javax.persistence.Inheritance</node>
-    <node x="564.90625" y="792.0">whiteboard.domain.model.TeachingMaterial</node>
-    <node x="439.0" y="90.0">whiteboard.domain.model.User</node>
-    <node x="247.70306122448977" y="814.0">whiteboard.domain.model.Announcement</node>
-    <node x="266.51619897959176" y="258.0">whiteboard.domain.model.SubjectCoordinator</node>
-    <node x="0.0" y="792.0">whiteboard.domain.model.AssessmentSubmission</node>
+    <node x="318.3429487179486" y="752.0">whiteboard.domain.model.Staff</node>
+    <node x="942.4679487179487" y="22.0">whiteboard.domain.model.SubjectContentType</node>
+    <node x="345.0336538461538" y="0.0">whiteboard.domain.model.Content</node>
+    <node x="195.0" y="254.0">whiteboard.domain.model.Subject</node>
+    <node x="0.0" y="276.0">whiteboard.domain.model.Role</node>
+    <node x="373.9679487179487" y="529.0">whiteboard.domain.model.Comment</node>
+    <node x="874.0" y="276.0">whiteboard.domain.model.TeachingMaterial</node>
+    <node x="143.96794871794867" y="474.0">whiteboard.domain.model.User</node>
+    <node x="689.0" y="298.0">whiteboard.domain.model.Announcement</node>
+    <node x="95.46794871794867" y="752.0">whiteboard.domain.model.Student</node>
+    <node x="444.0" y="276.0">whiteboard.domain.model.AssessmentSubmission</node>
+    <node x="0.0" y="849.0">whiteboard.domain.model.DefaultRoles</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="whiteboard.domain.model.TeachingMaterial" target="whiteboard.domain.model.SubjectContentType">
-      <point x="28.375" y="-48.0" />
-      <point x="706.78125" y="772.0" />
-      <point x="690.03125" y="772.0" />
-      <point x="-44.0" y="48.0" />
+    <edge source="whiteboard.domain.model.Role" target="whiteboard.domain.model.User">
+      <point x="21.875" y="48.0" />
+      <point x="109.375" y="434.0" />
+      <point x="196.46794871794867" y="434.0" />
+      <point x="-52.5" y="-114.0" />
     </edge>
-    <edge source="whiteboard.domain.model.Announcement" target="javax.persistence.Entity">
-      <point x="-39.75" y="-26.0" />
-      <point x="287.4530612244898" y="752.0" />
-      <point x="180.7474489795917" y="752.0" />
-      <point x="180.7474489795917" y="60.0" />
-      <point x="226.5604591836735" y="60.0" />
-      <point x="-24.571428571428584" y="15.0" />
+    <edge source="whiteboard.domain.model.TeachingMaterial" target="whiteboard.domain.model.SubjectContentType">
+      <point x="0.0" y="-48.0" />
+      <point x="-44.75" y="70.0" />
     </edge>
     <edge source="whiteboard.domain.model.Content" target="whiteboard.domain.model.User">
-      <point x="53.43750000000006" y="-81.0" />
-      <point x="493.9218112244898" y="540.0" />
-      <point x="562.9080357142857" y="540.0" />
-      <point x="562.9080357142857" y="233.0" />
-      <point x="572.3333333333334" y="233.0" />
-      <point x="53.33333333333337" y="59.0" />
+      <point x="19.666666666666686" y="92.0" />
+      <point x="453.20032051282055" y="234.0" />
+      <point x="433.5" y="234.0" />
+      <point x="433.5" y="454.0" />
+      <point x="343.4679487179487" y="454.0" />
+      <point x="94.5" y="-114.0" />
+    </edge>
+    <edge source="whiteboard.domain.model.Student" target="whiteboard.domain.model.User">
+      <point x="0.0" y="-26.0" />
+      <point x="-52.5" y="114.0" />
+    </edge>
+    <edge source="whiteboard.domain.model.Staff" target="whiteboard.domain.model.User">
+      <point x="-93.99999999999994" y="-26.0" />
+      <point x="341.84294871794873" y="727.0" />
+      <point x="301.4679487179487" y="727.0" />
+      <point x="52.5" y="114.0" />
     </edge>
     <edge source="whiteboard.domain.model.Content" target="whiteboard.domain.model.Subject">
-      <point x="-53.43749999999994" y="-81.0" />
-      <point x="387.0468112244898" y="540.0" />
-      <point x="246.10931122448977" y="540.0" />
-      <point x="-116.625" y="70.0" />
+      <point x="-39.333333333333314" y="92.0" />
+      <point x="394.20032051282055" y="224.0" />
+      <point x="330.625" y="224.0" />
+      <point x="27.125" y="-70.0" />
     </edge>
-    <edge source="whiteboard.domain.model.SubjectCoordinator" target="whiteboard.domain.model.User">
-      <point x="52.5" y="-26.0" />
-      <point x="424.01619897959176" y="233.0" />
-      <point x="465.66666666666674" y="233.0" />
-      <point x="-53.333333333333314" y="59.0" />
+    <edge source="whiteboard.domain.model.Subject" target="whiteboard.domain.model.User">
+      <point x="27.125" y="70.0" />
+      <point x="330.625" y="424.0" />
+      <point x="280.4679487179487" y="424.0" />
+      <point x="31.5" y="-114.0" />
     </edge>
-    <edge source="whiteboard.domain.model.SubjectCoordinator" target="whiteboard.domain.model.Subject">
-      <point x="78.75" y="26.0" />
-      <point x="450.26619897959176" y="335.0" />
-      <point x="487.1343112244898" y="335.0" />
-      <point x="124.40000000000003" y="-70.0" />
-    </edge>
-    <edge source="whiteboard.domain.model.Subject" target="javax.persistence.Entity">
-      <point x="-124.39999999999992" y="-70.0" />
-      <point x="238.33431122448985" y="335.0" />
-      <point x="245.53316326530611" y="335.0" />
-      <point x="245.53316326530611" y="70.0" />
-      <point x="251.13188775510207" y="70.0" />
-      <point x="0.0" y="15.0" />
-    </edge>
-    <edge source="whiteboard.domain.model.Content" target="javax.persistence.Entity">
-      <point x="-74.81249999999994" y="-81.0" />
-      <point x="365.6718112244898" y="550.0" />
-      <point x="196.73431122448977" y="550.0" />
-      <point x="196.73431122448977" y="70.0" />
-      <point x="238.8461734693878" y="70.0" />
-      <point x="-12.285714285714278" y="15.0" />
-    </edge>
-    <edge source="whiteboard.domain.model.Subject" target="whiteboard.domain.model.SubjectCoordinator">
-      <point x="5.6843418860808015E-14" y="-70.0" />
-      <point x="362.73431122448983" y="335.0" />
-      <point x="345.26619897959176" y="335.0" />
-      <point x="-26.25" y="26.0" />
+    <edge source="whiteboard.domain.model.User" target="whiteboard.domain.model.Role">
+      <point x="-73.5" y="-114.0" />
+      <point x="175.46794871794867" y="444.0" />
+      <point x="65.625" y="444.0" />
+      <point x="-21.875" y="48.0" />
     </edge>
     <edge source="whiteboard.domain.model.AssessmentSubmission" target="whiteboard.domain.model.Content">
-      <point x="56.25" y="-48.0" />
-      <point x="168.75" y="762.0" />
-      <point x="383.4843112244897" y="762.0" />
-      <point x="-57.0" y="81.0" />
+      <point x="0.0" y="-48.0" />
+      <point x="556.5" y="234.0" />
+      <point x="472.8669871794872" y="234.0" />
+      <point x="39.33333333333337" y="92.0" />
     </edge>
-    <edge source="whiteboard.domain.model.TeachingMaterial" target="javax.persistence.Entity">
-      <point x="-28.375" y="-48.0" />
-      <point x="650.03125" y="772.0" />
-      <point x="635.53125" y="772.0" />
-      <point x="635.53125" y="50.0" />
-      <point x="287.98903061224496" y="50.0" />
-      <point x="36.85714285714289" y="15.0" />
-    </edge>
-    <edge source="whiteboard.domain.model.SubjectCoordinator" target="javax.persistence.Entity">
-      <point x="-52.5" y="-26.0" />
-      <point x="319.01619897959176" y="70.0" />
-      <point x="263.41760204081635" y="70.0" />
-      <point x="12.285714285714278" y="15.0" />
+    <edge source="whiteboard.domain.model.User" target="whiteboard.domain.model.Subject">
+      <point x="10.5" y="-114.0" />
+      <point x="259.4679487179487" y="414.0" />
+      <point x="276.375" y="414.0" />
+      <point x="-27.125" y="70.0" />
     </edge>
     <edge source="whiteboard.domain.model.Announcement" target="whiteboard.domain.model.Content">
-      <point x="39.75" y="-26.0" />
-      <point x="366.9530612244898" y="772.0" />
-      <point x="440.4843112244897" y="772.0" />
-      <point x="0.0" y="81.0" />
+      <point x="0.0" y="-26.0" />
+      <point x="771.5" y="224.0" />
+      <point x="492.5336538461539" y="224.0" />
+      <point x="59.00000000000006" y="92.0" />
     </edge>
-    <edge source="whiteboard.domain.model.Content" target="javax.persistence.Inheritance">
-      <point x="74.81250000000006" y="-81.0" />
-      <point x="515.2968112244898" y="550.0" />
-      <point x="609.5" y="550.0" />
-      <point x="609.5" y="70.0" />
-      <point x="650.9080357142857" y="70.0" />
-      <point x="29.5" y="15.0" />
+    <edge source="whiteboard.domain.model.Comment" target="whiteboard.domain.model.Staff">
+      <point x="61.87500000000006" y="59.0" />
+      <point x="518.3429487179487" y="727.0" />
+      <point x="529.8429487179487" y="727.0" />
+      <point x="94.00000000000006" y="-26.0" />
+    </edge>
+    <edge source="whiteboard.domain.model.Staff" target="whiteboard.domain.model.Comment">
+      <point x="-46.99999999999994" y="-26.0" />
+      <point x="388.84294871794873" y="727.0" />
+      <point x="394.5929487179487" y="727.0" />
+      <point x="-61.875" y="59.0" />
     </edge>
     <edge source="whiteboard.domain.model.Subject" target="whiteboard.domain.model.Content">
-      <point x="116.625" y="70.0" />
-      <point x="479.3593112244898" y="520.0" />
-      <point x="451.1718112244898" y="520.0" />
-      <point x="10.687500000000057" y="-81.0" />
-    </edge>
-    <edge source="whiteboard.domain.model.AssessmentSubmission" target="javax.persistence.Entity">
-      <point x="-56.25" y="-48.0" />
-      <point x="56.25" y="50.0" />
-      <point x="214.2747448979592" y="50.0" />
-      <point x="-36.85714285714286" y="15.0" />
-    </edge>
-    <edge source="whiteboard.domain.model.User" target="javax.persistence.Entity">
-      <point x="-40.0" y="-59.0" />
-      <point x="479.0" y="60.0" />
-      <point x="275.7033163265306" y="60.0" />
-      <point x="24.571428571428555" y="15.0" />
-    </edge>
-    <edge source="whiteboard.domain.model.User" target="javax.persistence.Inheritance">
-      <point x="40.0" y="-59.0" />
-      <point x="559.0" y="70.0" />
-      <point x="591.9080357142857" y="70.0" />
-      <point x="-29.5" y="15.0" />
+      <point x="-27.125" y="-70.0" />
+      <point x="276.375" y="214.0" />
+      <point x="374.5336538461538" y="214.0" />
+      <point x="-59.0" y="92.0" />
     </edge>
     <edge source="whiteboard.domain.model.TeachingMaterial" target="whiteboard.domain.model.Content">
-      <point x="-85.125" y="-48.0" />
-      <point x="593.28125" y="772.0" />
-      <point x="497.4843112244897" y="772.0" />
-      <point x="57.0" y="81.0" />
+      <point x="-75.66666666666674" y="-48.0" />
+      <point x="911.8333333333333" y="214.0" />
+      <point x="512.2003205128206" y="214.0" />
+      <point x="78.66666666666669" y="92.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.8634361233480177" x="412.1173469387755" y="563.9438775510204" />
+  <settings layout="Hierarchic Group" zoom="0.8994818652849741" x="561.0" y="472.5" />
   <SelectedNodes />
   <Categories>
     <Category>Fields</Category>

@@ -2,28 +2,14 @@ package whiteboard.domain.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import java.util.List;
+import java.io.Serializable;
 
 @Entity(name = "Students")
-public class Student {
-
+public class Student extends User implements Serializable {
+    
     @NotEmpty
     private Long studentNumber;
-
-    @ManyToMany(cascade = CascadeType.ALL)
-    private List<Subject> subjects;
-
-    public List<Subject> getSubjects() {
-        return subjects;
-    }
-
-    public void setSubjects(List<Subject> subjects) {
-        this.subjects = subjects;
-    }
 
     public Long getStudentNumber() {
         return studentNumber;

@@ -5,9 +5,10 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import java.io.Serializable;
 
-@Entity(name = "comments")
-public class Comment {
+@Entity(name = "Comments")
+public class Comment implements Serializable {
 
     @Id
     private Long id;

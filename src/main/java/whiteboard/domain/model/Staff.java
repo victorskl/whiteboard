@@ -1,22 +1,20 @@
 package whiteboard.domain.model;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity(name = "Staffs")
 public class Staff extends User implements Serializable {
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    private List<Subject> subjects;
+    @OneToMany(mappedBy = "lecturer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Comment> comments;
 
-    public List<Subject> getSubjects() {
-        return subjects;
+    public List<Comment> getComments() {
+        return comments;
     }
 
-    public void setSubjects(List<Subject> subjects) {
-        this.subjects = subjects;
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }

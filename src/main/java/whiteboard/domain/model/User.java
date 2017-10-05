@@ -17,7 +17,11 @@ public abstract class User {
     private String password;
     private Boolean enabled;
 
+    @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Role> roles;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Subject> subjects;
 
     public Long getId() {
         return id;
@@ -81,5 +85,13 @@ public abstract class User {
 
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public List<Subject> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
     }
 }

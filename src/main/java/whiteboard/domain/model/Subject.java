@@ -19,12 +19,10 @@ public class Subject implements Serializable {
     private String department;
 
     @ManyToMany(mappedBy = "subjects", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Staff> staffs;
+    private List<User> users;
 
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Content> contents;
-
-    private List<Student> students;
 
     public String getName() {
         return name;
@@ -40,14 +38,6 @@ public class Subject implements Serializable {
 
     public void setCode(String code) {
         this.code = code;
-    }
-
-    public List<Staff> getStaffs() {
-        return staffs;
-    }
-
-    public void setStaffs(List<Staff> staffs) {
-        this.staffs = staffs;
     }
 
     public String getDepartment() {
@@ -66,12 +56,12 @@ public class Subject implements Serializable {
         this.contents = contents;
     }
 
-    public List<Student> getStudents() {
-        return students;
+    public List<User> getUsers() {
+        return users;
     }
 
-    public void setStudents(List<Student> students) {
-        this.students = students;
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 
     @Override

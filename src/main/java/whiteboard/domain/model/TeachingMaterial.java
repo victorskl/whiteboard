@@ -3,15 +3,16 @@ package whiteboard.domain.model;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
-import java.io.File;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity(name = "TeachingMaterials")
 public class TeachingMaterial extends Content implements Serializable {
 
+    @ElementCollection
     private List<String> attachments;
 
     @NotEmpty
