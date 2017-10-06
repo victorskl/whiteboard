@@ -4,17 +4,24 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "Users")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)  // Modified from TABLE_PER_CLASS to JOINED, bec we need a unique username throughout User of the system.
 public abstract class User {
 
     @Id
     @GeneratedValue
     private Long id;
+
     private String name;
+
     private String email;
+
     private String address;
+    
+    @Column(nullable = false, unique = true)
     private String username;
+
     private String password;
+
     private Boolean enabled;
 
     @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

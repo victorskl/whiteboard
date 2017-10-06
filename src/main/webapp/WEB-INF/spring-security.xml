@@ -1,0 +1,41 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!-- Expression-Based Access Control https://docs.spring.io/spring-security/site/docs/current/reference/html/el-access.html -->
+    <http use-expressions="true">
+        <intercept-url pattern="/resources/**" access="permitAll()"/>
+        <intercept-url pattern="/login*" access="isAnonymous()"/>
+
+        <!--<intercept-url pattern="/admin" access="isAuthenticated() and hasAnyRole('ADMIN_ROLE', 'ROLE_ADMIN')" />-->
+        <!--<intercept-url pattern="/welcome" access="isAuthenticated() and hasAnyRole('USER_ROLE', 'ROLE_USER')" />-->
+
+        <intercept-url pattern="/**" access="isAuthenticated()"/><!-- catch-all -->
+
+        <form-login login-page="/login" default-target-url="/cover"
+                    authentication-failure-url="/login?error=true" login-processing-url="/spring_security_login_check"/>
+        <logout logout-url="/logout" logout-success-url="/login?logout=true" delete-cookies="JSESSIONID"/>
+    </http>
+
+    <authentication-manager>
+        <!-- in-memory; dev purpose; not part of LMS domain; not require to include in report discussion -->
+        <authentication-provider>
+            <user-service>
+                <user name="admin" password="$2a$10$trT3.R/Nfey62eczbKEnueTcIbJXW.u1ffAo/XfyLpofwNDbEB86O" authorities="ROLE_ADMIN"/>
+            </user-service>
+            <password-encoder ref="passwordEncoder" />
+        </authentication-provider>
+
+        <!-- database; for LMS -->
+        <authentication-provider user-service-ref="userDetailsService">
+            <password-encoder ref="passwordEncoder" />
+        </authentication-provider>
+    </authentication-manager>
+
+    <beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+        <beans:constructor-arg value="11" />
+    </beans:bean>
+
+</beans:beans>

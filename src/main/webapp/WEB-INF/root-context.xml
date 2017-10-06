@@ -25,7 +25,7 @@
 
     <!-- jdbc:hsqldb:mem:dataSource -->
     <jdbc:embedded-database id="dataSource" type="HSQL">
-        <!--<jdbc:script location="classpath:insert-data.sql"/>-->
+        <jdbc:script location="classpath:insert-mock-users.sql" />
     </jdbc:embedded-database>
 
     <bean id="dbcpDataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
