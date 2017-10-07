@@ -43,7 +43,15 @@ public class CommonController {
             String message = violation.getMessage();
             //String msg = "Invalid " + propertyPath + "(" + message + ")";
             result.addError(new FieldError(entity.toString(), propertyPath, message));
-            logger.error(message);
+        }
+
+        if (result.hasErrors()) {
+            List<FieldError> errors = result.getFieldErrors();
+            for (FieldError error : errors ) {
+                String message = error.getObjectName() + " - " + error.getDefaultMessage();
+                logger.error(message);
+                System.err.println(message);
+            }
         }
     }
 

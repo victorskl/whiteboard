@@ -38,7 +38,7 @@ public class AdminController extends CommonController {
 
     @GetMapping(value = {"/admin/{username}/comments"})
     public String commentView(ModelMap model, @PathVariable String username) {
-        model.addAttribute("title", "Comments on Lecturer");
+        model.addAttribute("title", "Comments on " + username);
         model.addAttribute("username", username);
 
         Staff lecturer = userService.loadStaffByUsername(username);
@@ -49,7 +49,7 @@ public class AdminController extends CommonController {
 
     @GetMapping(value = {"/admin/{username}/comments/add"})
     public String commentFormView(ModelMap model, @PathVariable String username) {
-        model.addAttribute("title", "Add Comment on Lecturer");
+        model.addAttribute("title", "Add Comment on " + username);
         model.addAttribute("username", username);
 
         Comment comment = new Comment();
@@ -76,7 +76,6 @@ public class AdminController extends CommonController {
 
         //if (comment.getLocked()) comment.setLocked(false);
 
-        System.out.println("post: " +comment.hashCode());
 
         userService.saveOrUpdateComment(comment);
 
@@ -85,15 +84,13 @@ public class AdminController extends CommonController {
 
     @GetMapping(value = {"/admin/{username}/comments/{id}/edit"})
     public String commentFormEditView(ModelMap model, @PathVariable String username, @PathVariable Long id) {
-        model.addAttribute("title", "Edit Comment on Lecturer");
+        model.addAttribute("title", "Edit Comment on " + username);
         model.addAttribute("username", username);
 
         Comment comment = userService.getCommentById(id);
 
         //comment.setLocked(true);
         //userService.saveOrUpdateComment(comment);
-
-        System.out.println("view: " +comment.hashCode());
 
         model.addAttribute("comment", comment);
 
