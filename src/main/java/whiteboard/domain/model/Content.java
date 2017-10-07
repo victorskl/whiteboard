@@ -3,6 +3,10 @@ package whiteboard.domain.model;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import whiteboard.domain.service.UserDetailsLmsUserImpl;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -113,6 +117,13 @@ public abstract class Content {
             // update content
             lastModified = now;
             logger.info("Update Content");
+        }
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)) {
+            UserDetailsLmsUserImpl lmsUser = (UserDetailsLmsUserImpl) authentication.getPrincipal();
+            logger.info(lmsUser.getUser().toString());
+            postedBy = lmsUser.getUser();
         }
     }
 

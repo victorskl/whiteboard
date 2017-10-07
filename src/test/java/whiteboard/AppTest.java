@@ -1,10 +1,9 @@
 package whiteboard;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
-import whiteboard.domain.model.Role;
-import whiteboard.domain.model.Staff;
+import whiteboard.ui.model.DefaultRoles;
+
+import static org.junit.Assert.assertEquals;
 
 public class AppTest {
 
@@ -15,12 +14,6 @@ public class AppTest {
 
     @Test
     public void testUserRole(){
-        Role role = new Role();
-
-        //role.setName("USER");
-        //role.setName(DefaultRoles.valueOf(DefaultRoles.ADMIN));
-
-        Staff staff = new Staff();
-        staff.getRoles().add(role);
+        System.out.println(DefaultRoles.ROLE_LECTURER.toString());
     }
 }

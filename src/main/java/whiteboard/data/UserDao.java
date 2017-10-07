@@ -1,6 +1,10 @@
 package whiteboard.data;
 
+import whiteboard.domain.model.Comment;
+import whiteboard.domain.model.Role;
 import whiteboard.domain.model.User;
+
+import java.util.List;
 
 public interface UserDao {
 
@@ -11,4 +15,16 @@ public interface UserDao {
      * @return
      */
     User findByUsername(String username);
+
+    List<Role> getRolesByUserId(Long id);
+
+    List getUsersByRoleId(Long id);
+
+    Long getRoleIdByRoleName(String roleName);
+
+    List<Comment> getCommentsByStaffId(Long id);
+
+    void saveOrUpdateComment(Comment comment);
+
+    Comment getCommentById(Long id);
 }

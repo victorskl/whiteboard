@@ -3,10 +3,14 @@ package whiteboard.domain.service;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import whiteboard.domain.model.Role;
 import whiteboard.domain.model.User;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class UserDetailsLmsUserImpl implements UserDetails {
 
@@ -16,14 +20,18 @@ public class UserDetailsLmsUserImpl implements UserDetails {
         this.user = user;
     }
 
+    public User getUser() {
+        return user;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-//        final List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-//        for (final Privilege privilege : user.getPrivileges()) {
-//            authorities.add(new SimpleGrantedAuthority(privilege.getName()));
-//        }
-//        return authorities;
-        return null;
+        final List<GrantedAuthority> authorities = new ArrayList<>();
+        for (final Role role : user.getRoles()) {
+            authorities.add(new SimpleGrantedAuthority(role.getName()));
+            logger.info("Added authority: " + role.getName());
+        }
+        return authorities;
     }
 
     @Override

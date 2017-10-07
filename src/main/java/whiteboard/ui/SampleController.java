@@ -29,11 +29,5 @@ public class SampleController {
         return "theme";
     }
 
-    @RequestMapping(value = {"/admin", "/admin/dashboard"})
-    public String dashboard(ModelMap model) {
-        model.addAttribute("title", "Dashboard - Bootstrap");
-        return "admin/dashboard";
-    }
-
     private static final Logger logger = LogManager.getLogger(SampleController.class);
 }

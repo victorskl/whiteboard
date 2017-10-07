@@ -8,6 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import whiteboard.domain.model.Announcement;
 import whiteboard.domain.model.Subject;
+import whiteboard.ui.model.DefaultRoles;
 
 import javax.validation.Valid;
 
@@ -50,9 +51,24 @@ public class AnnouncementController extends CommonController {
         return view;
     }
 
+    /**
+     * Lecturers can only look at the announcements that they have created.
+     */
+    private boolean featureBLecturerAnnouncementConstraint(Announcement announcement) {
+        if (authenticationFacade.hasRole(DefaultRoles.ROLE_LECTURER.toString())) {
+            return !announcement.getPostedBy().getUsername()
+                    .equalsIgnoreCase(authenticationFacade.getUserDetailsLmsUserImpl().getUsername());
+        }
+        return false;
+    }
+
     @GetMapping("/{id}")
     public String announcementView(@PathVariable Long id, ModelMap model) {
         Announcement announcement = contentService.findAnnouncementById(id);
+        if (featureBLecturerAnnouncementConstraint(announcement)) {
+            // throw new ForbiddenException();
+            return "announcement";
+        }
         model.addAttribute("title", announcement.getTitle());
         model.addAttribute("announcement", announcement);
         return "announcement";
@@ -61,6 +77,10 @@ public class AnnouncementController extends CommonController {
     @GetMapping("/{id}/update")
     public String announcementUpdate(@PathVariable Long id, ModelMap model) {
         Announcement announcement = contentService.findAnnouncementById(id);
+        if (featureBLecturerAnnouncementConstraint(announcement)) {
+            // throw new ForbiddenException();
+            return "announcement";
+        }
         model.addAttribute("title", announcement.getTitle());
         model.addAttribute("announcement", announcement);
         return "announcementform";
@@ -69,6 +89,10 @@ public class AnnouncementController extends CommonController {
     @PostMapping("/{id}/delete")
     public String announcementDelete(@PathVariable Long id, ModelMap model) {
         Announcement announcement = contentService.findAnnouncementById(id);
+        if (featureBLecturerAnnouncementConstraint(announcement)) {
+            // throw new ForbiddenException();
+            return "announcement";
+        }
         contentService.deleteAnnouncementById(id);
         return "redirect:/subject/"+ announcement.getSubject().getCode()
                 + "?deletedAnnouncement=" + announcement.getTitle();

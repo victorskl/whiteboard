@@ -10,6 +10,7 @@
     <s:url value="/announcement/new" var="anno_new"/>
     <s:url value="/tm/new" var="tm_new"/>
     <s:url value="/logout" var="sslogout"/>
+    <s:url value="/admin" var="admurl" />
 
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
@@ -51,6 +52,13 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href=""><sec:authentication property="principal.username" /> <span class="sr-only">(current)</span></a></li>
+
+                        <sec:authorize access="hasRole('ROLE_ADMIN')">
+                            <li>
+                                <a href="${admurl}">Dashboard</a>
+                            </li>
+                        </sec:authorize>
+
                         <li>
                             <form action="${sslogout}" id="logout" method="post">
                                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />

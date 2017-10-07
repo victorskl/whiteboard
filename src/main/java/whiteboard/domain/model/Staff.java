@@ -1,15 +1,15 @@
 package whiteboard.domain.model;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity(name = "Staffs")
 public class Staff extends User implements Serializable {
 
-    @NotEmpty
     private Long staffNumber;
 
     @OneToMany(mappedBy = "lecturer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
