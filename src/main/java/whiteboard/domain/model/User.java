@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "Users")
-@Inheritance(strategy = InheritanceType.JOINED)  // Modified from TABLE_PER_CLASS to JOINED, bec we need a unique username throughout User of the system.
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class User {
 
     @Id

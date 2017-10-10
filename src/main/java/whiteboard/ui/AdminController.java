@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import whiteboard.domain.model.Comment;
 import whiteboard.domain.model.Staff;
+import whiteboard.domain.model.User;
 import whiteboard.ui.model.DefaultRoles;
 
 import javax.validation.Valid;
@@ -74,8 +75,7 @@ public class AdminController extends CommonController {
             comment.setLecturer(userService.loadStaffByUsername(username));
         }
 
-        //if (comment.getLocked()) comment.setLocked(false);
-
+        if (comment.getLocked()) comment.setLocked(false); // release the lock
 
         userService.saveOrUpdateComment(comment);
 
@@ -87,12 +87,28 @@ public class AdminController extends CommonController {
         model.addAttribute("title", "Edit Comment on " + username);
         model.addAttribute("username", username);
 
+        User currentLoginUser = authenticationFacade.getUserDetailsLmsUserImpl().getUser();
+
         Comment comment = userService.getCommentById(id);
 
-        //comment.setLocked(true);
-        //userService.saveOrUpdateComment(comment);
+        if (comment.getLocked()
+                && !comment.getLockedBy().getUsername().equalsIgnoreCase(currentLoginUser.getUsername())) {
 
-        model.addAttribute("comment", comment);
+            logger.info("Comment ID: " + comment.getId() + " is locked. Redirecting..");
+            return "redirect:/admin/" + username + "/comments";
+        }
+
+        else if (comment.getLockedBy() != null
+                && comment.getLockedBy().getUsername().equalsIgnoreCase(currentLoginUser.getUsername())) {
+            model.addAttribute("comment", comment);
+        }
+
+        else {
+            comment.setLocked(true);
+            comment.setLockedBy(currentLoginUser);
+            userService.saveOrUpdateComment(comment);
+            model.addAttribute("comment", comment);
+        }
 
         return "admin/commentform";
     }

@@ -1,8 +1,10 @@
 <jsp:root version="2.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:jsp="http://java.sun.com/JSP/Page"
-        xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:s="http://www.springframework.org/tags">
+        xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:s="http://www.springframework.org/tags"
+          xmlns:sec="http://www.springframework.org/security/tags">
 
     <s:url value="/" var="home" />
     <s:url value="/admin" var="admurl" />
+    <sec:authentication var="user" property="principal"/>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
@@ -20,7 +22,7 @@
                     <li><a href="${home}">LMS Frontpage</a></li>
                     <li><a href="#">Settings</a></li>
                     <li><a href="#">Profile</a></li>
-                    <li><a href="#">Help</a></li>
+                    <li class="active"><a href="#">${user.username.toUpperCase()}</a></li>
                 </ul>
                 <form class="navbar-form navbar-right">
                     <input type="text" class="form-control" placeholder="Search..."/>

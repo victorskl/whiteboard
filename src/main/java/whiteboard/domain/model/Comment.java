@@ -21,6 +21,9 @@ public class Comment implements Serializable {
 
     private Boolean locked = false;
 
+    @OneToOne
+    private User lockedBy;
+
     private Date timeOfPost;
 
     public Long getId() {
@@ -61,6 +64,14 @@ public class Comment implements Serializable {
 
     public void setTimeOfPost(Date timeOfPost) {
         this.timeOfPost = timeOfPost;
+    }
+
+    public User getLockedBy() {
+        return lockedBy;
+    }
+
+    public void setLockedBy(User lockedBy) {
+        this.lockedBy = lockedBy;
     }
 
     public void resolveCommentState() {
