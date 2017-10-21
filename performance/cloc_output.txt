@@ -1,0 +1,52 @@
+      43 text files.
+classified 43 files      43 unique files.                              
+       2 files ignored.
+
+github.com/AlDanial/cloc v 1.74  T=0.29 s (142.8 files/s, 7106.6 lines/s)
+---------------------------------------------------------------------------------------------------------------------------
+File                                                                                  blank %      comment %           code
+---------------------------------------------------------------------------------------------------------------------------
+../src/main/java/whiteboard/domain/model/Content.java                                   19.08           1.53            104
+../src/main/java/whiteboard/ui/AdminController.java                                     26.27           0.85             86
+../src/main/java/whiteboard/domain/model/Comment.java                                   21.62           3.60             83
+../src/main/java/whiteboard/ui/AnnouncementController.java                              17.65           5.88             78
+../src/main/java/whiteboard/domain/model/User.java                                      27.88           0.00             75
+../src/main/java/whiteboard/domain/model/Subject.java                                   21.74           0.00             72
+../src/main/java/whiteboard/data/ContentDaoImpl.java                                    15.48           0.00             71
+../src/main/java/whiteboard/data/UserDaoImpl.java                                       17.05           2.27             71
+../src/main/java/whiteboard/ui/SubjectController.java                                   21.51           3.23             70
+../src/main/java/whiteboard/ui/TeachingMaterialController.java                          21.74           6.52             66
+../src/main/java/whiteboard/domain/service/ContentServiceImpl.java                      21.33           0.00             59
+../src/main/java/whiteboard/domain/service/UserDetailsLmsUserImpl.java                  19.44           0.00             58
+../src/main/java/whiteboard/ui/CommonController.java                                    20.59           1.47             53
+../src/main/java/whiteboard/domain/service/UserServiceImpl.java                         18.33           0.00             49
+../src/main/java/whiteboard/domain/service/SubjectServiceImpl.java                      21.57           3.92             38
+../src/main/java/whiteboard/domain/model/TeachingMaterial.java                          25.00           0.00             36
+../src/main/java/whiteboard/domain/model/Role.java                                      25.53           0.00             35
+../src/main/java/whiteboard/domain/service/UserDetailsServiceDbImpl.java                17.95           0.00             32
+../src/main/java/whiteboard/data/SubjectDaoImpl.java                                    20.00           0.00             32
+../src/main/java/whiteboard/domain/model/AssessmentSubmission.java                      24.32           0.00             28
+../src/main/java/whiteboard/ui/SampleController.java                                    18.18           0.00             27
+../src/main/java/whiteboard/domain/service/AuthenticationFacadeImpl.java                16.67          11.11             26
+../src/main/java/whiteboard/domain/model/Staff.java                                     24.24           0.00             25
+../src/main/java/whiteboard/ui/model/LoginFormDto.java                                  30.30           0.00             23
+../src/main/java/whiteboard/data/AbstractDao.java                                       25.93           0.00             20
+../src/main/java/whiteboard/ui/converter/ContentDateConverter.java                      25.93           3.70             19
+../src/main/java/whiteboard/domain/model/SubjectContentType.java                        21.74           0.00             18
+../src/main/java/whiteboard/ui/LoginController.java                                     12.77          48.94             18
+../src/main/java/whiteboard/domain/model/Announcement.java                              26.09           0.00             17
+../src/main/java/whiteboard/ui/HelloServlet.java                                        19.05           0.00             17
+../src/main/java/whiteboard/data/ContentDao.java                                        15.79           0.00             16
+../src/main/java/whiteboard/domain/service/ContentService.java                          15.79           0.00             16
+../src/main/java/whiteboard/ui/converter/TMTypeConverter.java                           28.57           0.00             15
+../src/main/java/whiteboard/data/UserDao.java                                           33.33          20.00             14
+../src/main/java/whiteboard/domain/model/Student.java                                   27.78           0.00             13
+../src/main/java/whiteboard/ui/converter/SubjectCodeConverter.java                      23.53           0.00             13
+../src/main/java/whiteboard/domain/service/UserService.java                             36.84           0.00             12
+../src/main/java/whiteboard/data/SubjectDao.java                                        23.08           0.00             10
+../src/main/java/whiteboard/domain/service/SubjectService.java                          23.08           0.00             10
+../src/main/java/whiteboard/domain/service/AuthenticationFacade.java                    30.00           0.00              7
+../src/main/java/whiteboard/ui/model/DefaultRoles.java                                  14.29           0.00              6
+---------------------------------------------------------------------------------------------------------------------------
+SUM:                                                                                    21.66           2.99           1538
+---------------------------------------------------------------------------------------------------------------------------

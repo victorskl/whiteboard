@@ -6,6 +6,10 @@
 
     <!-- Expression-Based Access Control https://docs.spring.io/spring-security/site/docs/current/reference/html/el-access.html -->
     <http use-expressions="true">
+
+        <!-- disable csrf for ease of performance test -->
+        <csrf disabled="true"/>
+
         <intercept-url pattern="/resources/**" access="permitAll()"/>
         <intercept-url pattern="/login*" access="isAnonymous()"/>
 

@@ -1,0 +1,178 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CKJM Chidamber and Kemerer Java Metrics</title>
+<meta name="Generator" content="$Id: \\dds\\src\\Research\\ckjm.RCS\\xsl\\ckjm.xsl,v 1.3 2005/10/15 09:03:57 dds Exp $">
+<style type="text/css">
+      body {
+        font:normal 68% verdana,arial,helvetica;
+        color:#000000;
+      }
+      table {
+        width: 100%;
+      }
+
+      table tr td, tr th {
+        font:normal 68% verdana,arial,helvetica;
+      }
+      table.details tr th{
+        font-weight: bold;
+        text-align:left;
+        background:#a6caf0;
+      }
+      table.details tr td{
+        background:#eeeee0;
+      }
+
+      p {
+        line-height:1.5em;
+        margin-top:0.5em; margin-bottom:1.0em;
+        margin-left:2em;
+        margin-right:2em;
+      }
+      h1 {
+        margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+      }
+      h2 {
+        margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+      }
+      </style>
+</head>
+<body>
+<h1>CKJM Chidamber and Kemerer Java Metrics</h1>
+<p align="right">Designed for use with <a href="http://www.dmst.aueb.gr/dds/sw/ckjm/">CKJM</a> and <a href="http://ant.apache.org">Ant</a>.</p>
+<hr size="2">
+<h2>Summary</h2>
+<table class="details">
+<tr>
+<th>name</th><th>wmc</th><th>dit</th><th>noc</th><th>cbo</th><th>rfc</th><th>lcom</th><th>ca</th><th>npm</th>
+</tr>
+<tr>
+<td>whiteboard.data.AbstractDao</td><td>5</td><td>1</td><td>3</td><td>2</td><td>10</td><td>10</td><td>3</td><td>4</td>
+</tr>
+<tr>
+<td>whiteboard.data.ContentDao</td><td>10</td><td>1</td><td>0</td><td>2</td><td>10</td><td>45</td><td>2</td><td>10</td>
+</tr>
+<tr>
+<td>whiteboard.data.ContentDaoImpl</td><td>11</td><td>0</td><td>0</td><td>7</td><td>19</td><td>55</td><td>0</td><td>11</td>
+</tr>
+<tr>
+<td>whiteboard.data.SubjectDao</td><td>5</td><td>1</td><td>0</td><td>1</td><td>5</td><td>10</td><td>2</td><td>5</td>
+</tr>
+<tr>
+<td>whiteboard.data.SubjectDaoImpl</td><td>6</td><td>0</td><td>0</td><td>5</td><td>15</td><td>15</td><td>0</td><td>6</td>
+</tr>
+<tr>
+<td>whiteboard.data.UserDao</td><td>7</td><td>1</td><td>0</td><td>2</td><td>7</td><td>21</td><td>3</td><td>7</td>
+</tr>
+<tr>
+<td>whiteboard.data.UserDaoImpl</td><td>9</td><td>0</td><td>0</td><td>8</td><td>21</td><td>30</td><td>0</td><td>8</td>
+</tr>
+<tr>
+<td>whiteboard.domain.model.Announcement</td><td>3</td><td>0</td><td>0</td><td>1</td><td>4</td><td>1</td><td>5</td><td>3</td>
+</tr>
+<tr>
+<td>whiteboard.domain.model.AssessmentSubmission</td><td>7</td><td>0</td><td>0</td><td>1</td><td>8</td><td>15</td><td>0</td><td>7</td>
+</tr>
+<tr>
+<td>whiteboard.domain.model.Comment</td><td>16</td><td>1</td><td>0</td><td>2</td><td>23</td><td>84</td><td>5</td><td>16</td>
+</tr>
+<tr>
+<td>whiteboard.domain.model.Content</td><td>17</td><td>1</td><td>3</td><td>9</td><td>32</td><td>90</td><td>3</td><td>16</td>
+</tr>
+<tr>
+<td>whiteboard.domain.model.Role</td><td>7</td><td>1</td><td>0</td><td>0</td><td>8</td><td>15</td><td>1</td><td>7</td>
+</tr>
+<tr>
+<td>whiteboard.domain.model.Staff</td><td>5</td><td>0</td><td>0</td><td>1</td><td>6</td><td>6</td><td>4</td><td>5</td>
+</tr>
+<tr>
+<td>whiteboard.domain.model.Student</td><td>3</td><td>0</td><td>0</td><td>1</td><td>4</td><td>1</td><td>0</td><td>3</td>
+</tr>
+<tr>
+<td>whiteboard.domain.model.Subject</td><td>13</td><td>1</td><td>0</td><td>0</td><td>17</td><td>50</td><td>9</td><td>13</td>
+</tr>
+<tr>
+<td>whiteboard.domain.model.SubjectContentType</td><td>6</td><td>2</td><td>0</td><td>0</td><td>9</td><td>9</td><td>4</td><td>4</td>
+</tr>
+<tr>
+<td>whiteboard.domain.model.TeachingMaterial</td><td>7</td><td>0</td><td>0</td><td>2</td><td>8</td><td>15</td><td>5</td><td>7</td>
+</tr>
+<tr>
+<td>whiteboard.domain.model.User</td><td>19</td><td>1</td><td>2</td><td>0</td><td>20</td><td>153</td><td>11</td><td>19</td>
+</tr>
+<tr>
+<td>whiteboard.domain.service.AuthenticationFacade</td><td>3</td><td>1</td><td>0</td><td>2</td><td>3</td><td>3</td><td>4</td><td>3</td>
+</tr>
+<tr>
+<td>whiteboard.domain.service.AuthenticationFacadeImpl</td><td>5</td><td>1</td><td>0</td><td>8</td><td>17</td><td>8</td><td>0</td><td>4</td>
+</tr>
+<tr>
+<td>whiteboard.domain.service.ContentService</td><td>10</td><td>1</td><td>0</td><td>2</td><td>10</td><td>45</td><td>5</td><td>10</td>
+</tr>
+<tr>
+<td>whiteboard.domain.service.ContentServiceImpl</td><td>12</td><td>1</td><td>0</td><td>6</td><td>26</td><td>0</td><td>0</td><td>11</td>
+</tr>
+<tr>
+<td>whiteboard.domain.service.SubjectService</td><td>5</td><td>1</td><td>0</td><td>1</td><td>5</td><td>10</td><td>6</td><td>5</td>
+</tr>
+<tr>
+<td>whiteboard.domain.service.SubjectServiceImpl</td><td>7</td><td>1</td><td>0</td><td>5</td><td>14</td><td>0</td><td>0</td><td>6</td>
+</tr>
+<tr>
+<td>whiteboard.domain.service.UserDetailsLmsUserImpl</td><td>10</td><td>1</td><td>0</td><td>6</td><td>29</td><td>0</td><td>6</td><td>9</td>
+</tr>
+<tr>
+<td>whiteboard.domain.service.UserDetailsServiceDbImpl</td><td>3</td><td>1</td><td>0</td><td>8</td><td>16</td><td>0</td><td>0</td><td>2</td>
+</tr>
+<tr>
+<td>whiteboard.domain.service.UserService</td><td>6</td><td>1</td><td>0</td><td>2</td><td>6</td><td>15</td><td>3</td><td>6</td>
+</tr>
+<tr>
+<td>whiteboard.domain.service.UserServiceImpl</td><td>7</td><td>1</td><td>0</td><td>6</td><td>20</td><td>0</td><td>0</td><td>7</td>
+</tr>
+<tr>
+<td>whiteboard.ui.AdminController</td><td>7</td><td>0</td><td>0</td><td>12</td><td>44</td><td>3</td><td>0</td><td>6</td>
+</tr>
+<tr>
+<td>whiteboard.ui.AnnouncementController</td><td>8</td><td>0</td><td>0</td><td>13</td><td>37</td><td>10</td><td>0</td><td>6</td>
+</tr>
+<tr>
+<td>whiteboard.ui.CommonController</td><td>4</td><td>1</td><td>4</td><td>9</td><td>26</td><td>4</td><td>4</td><td>2</td>
+</tr>
+<tr>
+<td>whiteboard.ui.converter.ContentDateConverter</td><td>3</td><td>1</td><td>0</td><td>1</td><td>8</td><td>3</td><td>0</td><td>3</td>
+</tr>
+<tr>
+<td>whiteboard.ui.converter.SubjectCodeConverter</td><td>3</td><td>1</td><td>0</td><td>3</td><td>5</td><td>3</td><td>0</td><td>3</td>
+</tr>
+<tr>
+<td>whiteboard.ui.converter.TMTypeConverter</td><td>3</td><td>1</td><td>0</td><td>2</td><td>6</td><td>3</td><td>0</td><td>3</td>
+</tr>
+<tr>
+<td>whiteboard.ui.ForbiddenException</td><td>1</td><td>4</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td>
+</tr>
+<tr>
+<td>whiteboard.ui.HelloServlet</td><td>2</td><td>0</td><td>0</td><td>0</td><td>6</td><td>1</td><td>0</td><td>2</td>
+</tr>
+<tr>
+<td>whiteboard.ui.LoginController</td><td>3</td><td>1</td><td>0</td><td>4</td><td>8</td><td>1</td><td>0</td><td>2</td>
+</tr>
+<tr>
+<td>whiteboard.ui.model.DefaultRoles</td><td>4</td><td>2</td><td>0</td><td>0</td><td>7</td><td>4</td><td>2</td><td>2</td>
+</tr>
+<tr>
+<td>whiteboard.ui.model.LoginFormDto</td><td>5</td><td>1</td><td>0</td><td>0</td><td>6</td><td>6</td><td>1</td><td>5</td>
+</tr>
+<tr>
+<td>whiteboard.ui.SampleController</td><td>5</td><td>1</td><td>0</td><td>3</td><td>9</td><td>4</td><td>0</td><td>4</td>
+</tr>
+<tr>
+<td>whiteboard.ui.SubjectController</td><td>8</td><td>0</td><td>0</td><td>8</td><td>25</td><td>8</td><td>0</td><td>7</td>
+</tr>
+<tr>
+<td>whiteboard.ui.TeachingMaterialController</td><td>7</td><td>0</td><td>0</td><td>10</td><td>31</td><td>3</td><td>0</td><td>6</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<project name="whiteboardlms" default="ckjm">
+
+    <!-- edit to point to ckjm-1.9.zip extract directory -->
+    <property name="CKJM_DIR" value="/Users/victorskl/Tools/ckjm-1.9"/>
+
+    <target name="ckjm">
+
+        <echo message = "The CKJM_DIR is ${CKJM_DIR}"/>
+
+        <taskdef name="ckjm" classname="gr.spinellis.ckjm.ant.CkjmTask">
+            <classpath>
+                <pathelement location="${CKJM_DIR}/build/ckjm-1.9.jar"/>
+            </classpath>
+        </taskdef>
+
+        <ckjm outputfile="ckjm.xml" format="xml" classdir="../target/classes">
+            <include name="**/*.class"/>
+            <exclude name="**/*Test.class"/>
+        </ckjm>
+
+        <style in="ckjm.xml" style="${CKJM_DIR}/xsl/ckjm.xsl" out="ckjm.html"/>
+    </target>
+
+</project>

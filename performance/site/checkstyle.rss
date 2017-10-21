@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<rss version="0.91">
+  <channel>
+    <title>whiteboard - Checkstyle report</title>
+    <link>http://www.whiteboard.com</link>
+    <description>whiteboard - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2017</copyright>
+    <item>
+      <title>File: 41,
+             Errors: 0,
+             Warnings: 1194,
+             Infos: 0
+      </title>
+            <link>http://www.whiteboard.com/checkstyle.html</link>
+      <description>
+        <p>Click <a href="http://www.whiteboard.com/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.service.ContentService.java">whiteboard/domain/service/ContentService.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  19
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.converter.SubjectCodeConverter.java">whiteboard/ui/converter/SubjectCodeConverter.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.model.Student.java">whiteboard/domain/model/Student.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.AdminController.java">whiteboard/ui/AdminController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  82
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.model.LoginFormDto.java">whiteboard/ui/model/LoginFormDto.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.data.UserDaoImpl.java">whiteboard/data/UserDaoImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  48
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.SampleController.java">whiteboard/ui/SampleController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  17
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.data.ContentDaoImpl.java">whiteboard/data/ContentDaoImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  46
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.model.Staff.java">whiteboard/domain/model/Staff.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.data.UserDao.java">whiteboard/data/UserDao.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  9
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.model.User.java">whiteboard/domain/model/User.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  65
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.AnnouncementController.java">whiteboard/ui/AnnouncementController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  76
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.model.Content.java">whiteboard/domain/model/Content.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  94
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.service.SubjectService.java">whiteboard/domain/service/SubjectService.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  9
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.service.SubjectServiceImpl.java">whiteboard/domain/service/SubjectServiceImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  23
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.LoginController.java">whiteboard/ui/LoginController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  12
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.data.SubjectDaoImpl.java">whiteboard/data/SubjectDaoImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  21
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.model.TeachingMaterial.java">whiteboard/domain/model/TeachingMaterial.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  23
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.converter.TMTypeConverter.java">whiteboard/ui/converter/TMTypeConverter.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.HelloServlet.java">whiteboard/ui/HelloServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.service.UserDetailsServiceDbImpl.java">whiteboard/domain/service/UserDetailsServiceDbImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  18
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.CommonController.java">whiteboard/ui/CommonController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.data.ContentDao.java">whiteboard/data/ContentDao.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  19
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.model.Announcement.java">whiteboard/domain/model/Announcement.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.service.UserDetailsLmsUserImpl.java">whiteboard/domain/service/UserDetailsLmsUserImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  39
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.service.UserService.java">whiteboard/domain/service/UserService.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.model.AssessmentSubmission.java">whiteboard/domain/model/AssessmentSubmission.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  26
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.model.Role.java">whiteboard/domain/model/Role.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  23
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.service.ContentServiceImpl.java">whiteboard/domain/service/ContentServiceImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  38
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.service.UserServiceImpl.java">whiteboard/domain/service/UserServiceImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  33
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.model.SubjectContentType.java">whiteboard/domain/model/SubjectContentType.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  12
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.model.Comment.java">whiteboard/domain/model/Comment.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  79
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.model.DefaultRoles.java">whiteboard/ui/model/DefaultRoles.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.SubjectController.java">whiteboard/ui/SubjectController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  67
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.data.SubjectDao.java">whiteboard/data/SubjectDao.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  9
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.service.AuthenticationFacade.java">whiteboard/domain/service/AuthenticationFacade.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.converter.ContentDateConverter.java">whiteboard/ui/converter/ContentDateConverter.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.ui.TeachingMaterialController.java">whiteboard/ui/TeachingMaterialController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  64
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.model.Subject.java">whiteboard/domain/model/Subject.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  64
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.data.AbstractDao.java">whiteboard/data/AbstractDao.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.whiteboard.com/checkstyle.html#whiteboard.domain.service.AuthenticationFacadeImpl.java">whiteboard/domain/service/AuthenticationFacadeImpl.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+
