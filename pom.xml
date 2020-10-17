@@ -24,7 +24,7 @@
         <jstl.api.version>1.2.1</jstl.api.version>
         <jstl.version>1.2</jstl.version>
         <validation-api.version>1.1.0.Final</validation-api.version>
-        <hibernate-validator.version>5.2.1.Final</hibernate-validator.version>
+        <hibernate-validator.version>5.3.6.Final</hibernate-validator.version>
 
         <spring.version>4.3.10.RELEASE</spring.version>
         <spring.security.version>4.1.4.RELEASE</spring.security.version>
